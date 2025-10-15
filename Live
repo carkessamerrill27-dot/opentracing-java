@@ -1,0 +1,22 @@
+//@version=6
+indicator("Line wrapping demo")
+
+//@variable A single string defined on three wrapped lines. Each line after the first is indented by five spaces. 
+//          Every subsequent code line also inserts a leading space character.
+string displayText = "Single-line text
+     defined across
+     three wrapped code lines"
+
+if barstate.isfirst
+    log.info(displayText)//@version=6
+indicator("Literal strings demo") // The script's displayed title does not include the quotation marks.
+
+if barstate.isfirst
+    // Log "Hello world!" on the first bar. The logged text does not include `"` characters. 
+    log.info("Hello world!")//@variable A literal string containing `Hello world!`. Uses the `"` character as the enclosing delimiter. 
+string hello1 = "Hello world!"
+//@variable A literal string containing `Hello world!`. Uses the `'` character as the enclosing delimiter. 
+string hello2 = 'Hello world!'log.infobarstate.isfirst!//@version=6
+library("MyConstants")
+
+export const float SILVER_RATIO = 1.0 + math.sqrt(2)
